@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Effect</title>
+<style>
+  li {
+    color: rgba(0, 0, 0, 0.798);
+    transition: color 0.2s;
+    cursor: pointer; 
+  }
+</style>
+</head>
+<body>
+  <ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <script>
+    const items = document.querySelectorAll("li");
+
+    items.forEach(item => {
+      item.addEventListener("mouseover", function() {
+        item.style.color = "red"; 
+      });
+      item.addEventListener("mouseout", function() {
+        item.style.color = "black"; 
+      });
+    });
+  </script>
+</body>
+</html>
